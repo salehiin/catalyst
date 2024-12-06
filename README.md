@@ -41,9 +41,26 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 # 80.6 - 
 # 80.8 - 03:50
 # 80.10 - 12:10
+# 80.11 - 02:10
+# 80.12 - 03:50
+# 81.01 - 
+# 81.03 - 
+# 81.04 - 02:06
+# 81.05 - 
+# 81.6 - 08:30
+# 81.7
+# 81.8 - 05:45
+# 81.9 - 04:30
+# 81:10 -
+# 81.11 - 
+# 81.12 - 03:00
+# 81.13 - 02:40
+# NEXT_PUBLIC_MONGODB_URI=mongodb://0.0.0.0:27017/catalyst
 
 
 # h-[calc(100vh-68px*2)]
+
+# Primary: #0000ff, #0018f9, #007AFF(#007AFFFF), #0c77ff, #1e97f3, #2196f3 ()
 
 # Background: #141414 (Jet Black)
 # Primary: #ef5938 (Vibrant Orange)
@@ -64,3 +81,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 25,400
 
 164734 = 234544 - 
+
+
+
+You can't sign in to this app because it doesn't comply with Google's OAuth 2.0 policy.
+
+If you're the app developer, register the redirect URI in the Google Cloud Console.
+Request details: redirect_uri=http://localhost:3000/api/auth/callback/google flowName=GeneralOAuthFlow
+Related developer documentation

@@ -16,8 +16,8 @@ const Banner = () => {
                                 <div className="space-y-6">
                                     <h1 className="text-5xl font-bold">{banner.title}</h1>
                                     <p>{banner.description}</p>
-                                    <button className="btn btn-warning mr-4">Discover More</button>
-                                    <button className="btn btn-warning btn-outline">Latest Project</button>
+                                    <button className="btn bg-[#0018f9] mr-4">Discover More</button>
+                                    <button className="btn text-[#0018f9] btn-outline">Latest Project</button>
                                 </div>
                             </div>
                             <div className="absolute flex transform justify-between bottom-12 right-12">

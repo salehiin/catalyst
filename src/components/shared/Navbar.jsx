@@ -32,7 +32,7 @@ const Navbar = () => {
                     </div>
                     <Link href={'/'} className="btn btn-ghost text-xl flex">
                         <Image src="/catalyst.png" width={20} height={20} alt="Catalyst" />
-                        <p className='text-xl text-[#ef5938]'>Catalyst</p>
+                        <p className='text-xl text-[#0018f9]'>Catalyst</p>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -45,13 +45,25 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="navbar-end">
-                    <div className='flex space-x-3 items-center'>
+                    <div className='flex space-x-3 items-center '>
                         <BiSolidBriefcaseAlt2 className='text-xl' />
                         <FaSearchDollar className='text-xl' />
-                        <Link href={'/'} className="btn btn-outline text-[#ef5938] hover:bg-[#ef5938] hover:text-white">Appointment</Link>
-                        {   !session.data ?
-                            <Link href={'/login'} className="btn text-[#efe8ce] bg-[#ef5938] hover:outline hover:outline-none">Login</Link> :
-                            <button className="btn text-[#efe8ce] bg-[#ef5938] hover:outline hover:outline-none" onClick={() => signOut()}>Logout</button>
+
+                        <Link href={'/'} className="btn btn-outline text-[#0018f9] hover:bg-[#0018f9] hover:text-white">Appointment</Link>
+
+
+                        {session?.status === 'loading' &&
+                            <h6>Loading...</h6>
+                        }
+
+                        {session?.status === 'unauthenticated' &&
+                            <Link href={'/login'} className="btn text-[#efe8ce] bg-[#0018f9] hover:outline hover:outline-none">Login</Link>
+                        }
+                        {session?.status === 'authenticated' &&
+                        <div className='flex '>
+                            <button className="btn text-[#efe8ce] bg-[#0018f9] hover:outline hover:outline-none" onClick={() => signOut()}>Logout</button>
+                            <Image className='rounded-full ml-2' width={40} height={20} alt={session?.data?.user?.name} src={session?.data?.user?.image} />
+                        </div>
                         }
                     </div>
                 </div>
@@ -63,7 +75,7 @@ const Navbar = () => {
 const navItems = [
     {
         title: "Home",
-        path: "/about"
+        path: "/"
     },
     {
         title: "About Us",
@@ -72,6 +84,10 @@ const navItems = [
     {
         title: "Services",
         path: "/services"
+    },
+    {
+        title: "MyBookings",
+        path: "/my-bookings"
     },
     {
         title: "Blog",

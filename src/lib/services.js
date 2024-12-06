@@ -103,7 +103,7 @@ export const services = [
       "title": "Technology Consulting",
       "description": "Leverage the latest technologies to enhance operations and improve productivity.",
       "icon": "tech-consulting.png",
-      "img": "https://i.ibb.co.com/cYGrcmg/catalyst.png",
+      "img": "https://i.postimg.cc/tCz6h8nG/8.jpg",
       "category": "Technology",
       "price": "2200",
       "facility": [
@@ -117,7 +117,7 @@ export const services = [
       "title": "Product Development",
       "description": "End-to-end support in designing and developing innovative products.",
       "icon": "product-development.png",
-      "img": "https://i.ibb.co.com/cYGrcmg/catalyst.png",
+      "img": "https://i.postimg.cc/tJwMD7M7/9.jpg",
       "category": "Startup Support",
       "price": "3000",
       "facility": [
@@ -131,7 +131,7 @@ export const services = [
       "title": "Human Resources Consulting",
       "description": "Streamline recruitment, training, and employee management processes.",
       "icon": "hr-consulting.png",
-      "img": "https://i.ibb.co.com/cYGrcmg/catalyst.png",
+      "img": "https://i.postimg.cc/1zXYxG14/10.jpg",
       "category": "Consulting",
       "price": "1600",
       "facility": [
@@ -145,7 +145,7 @@ export const services = [
       "title": "Customer Experience Optimization",
       "description": "Design seamless customer journeys to enhance satisfaction and loyalty.",
       "icon": "customer-experience.png",
-      "img": "https://i.ibb.co.com/cYGrcmg/catalyst.png",
+      "img": "https://i.postimg.cc/zfmZk2g8/11.jpg",
       "category": "Consulting",
       "price": "1400",
       "facility": [
@@ -159,7 +159,7 @@ export const services = [
       "title": "Growth Hacking Strategies",
       "description": "Innovative techniques to achieve rapid growth and maximize market reach.",
       "icon": "growth-hacking.png",
-      "img": "https://i.ibb.co.com/cYGrcmg/catalyst.png",
+      "img": "https://i.postimg.cc/ZK0GzzPJ/12.jpg",
       "category": "Marketing",
       "price": "2000",
       "facility": [

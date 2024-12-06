@@ -2,14 +2,19 @@
 import { redirect } from "next/dist/server/api-utils";
 import Image from "next/image";
 import Link from "next/link";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { FaFacebook, FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import SocialSignin from "@/components/shared/SocialSignin";
+
 
 
 const Page = () => {
 
     const router = useRouter()
+    const session = useSession()
+    const searchParams = useSearchParams()
+    const path = searchParams.get('redirect');
     const handleLogin = async (event) => {
         event.preventDefault();
         const email = event.target.email.value;
@@ -17,7 +22,8 @@ const Page = () => {
         const resp = await signIn('credentials', {
             email, 
             password, 
-            redirect : false
+            redirect : true,
+            callbackUrl : path ? path : '/'
         });
         if(resp.status === 200){
             router.push('/')
@@ -43,12 +49,8 @@ const Page = () => {
                     </form>
                     <div>
                         <h6 className="my-8 text-center">or sign in with</h6>
-                        <div className="flex items-center justify-center gap-4">
-                            <button className="btn rounded-full flex items-center justify-center text-accent"><FaFacebookF /></button>
-                            <button className="btn rounded-full flex items-center justify-center text-accent"><FaGoogle /></button>
-                            <button className="btn rounded-full flex items-center justify-center text-accent"><FaGithub /></button>
-                        </div>
-                        <h6 className="my-8 text-center">Don't have account?<Link className="text-accent font-semibold" href={'/signup'}> Sign Up</Link> </h6>
+                        <SocialSignin/>
+                        <h6 className="my-8 text-center">Dont have account?<Link className="text-accent font-semibold" href={'/signup'}> Sign Up</Link> </h6>
                     </div>
                 </div>
             </div>
