@@ -8,8 +8,9 @@ export const GET = async () => {
     try {
         await servicesCollection.deleteMany();
         const resp = await servicesCollection.insertMany(services);
-        return NextResponse.json({"message" : "Seeded Successfully"})
+        return NextResponse.json({message : "Seeded Successfully"})
     } catch (error) {
-        return NextResponse.json({"message" : "No data found"})
+        return NextResponse.json({message : "No data found"})
     }
 }
+////////////////////////////

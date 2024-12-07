@@ -11,10 +11,11 @@ import SocialSignin from "@/components/shared/SocialSignin";
 
 const Page = () => {
 
-    const router = useRouter()
-    const session = useSession()
-    const searchParams = useSearchParams()
+    const router = useRouter();
+    const session = useSession();
+    const searchParams = useSearchParams();
     const path = searchParams.get('redirect');
+
     const handleLogin = async (event) => {
         event.preventDefault();
         const email = event.target.email.value;
@@ -23,11 +24,11 @@ const Page = () => {
             email, 
             password, 
             redirect : true,
-            callbackUrl : path ? path : '/'
+            callbackUrl : path ? path : '/',
         });
-        if(resp.status === 200){
-            router.push('/')
-        }
+        // if(resp.status === 200){
+        //     router.push('/')
+        // }
     };
 
     return (

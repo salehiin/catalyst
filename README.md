@@ -89,3 +89,7 @@ You can't sign in to this app because it doesn't comply with Google's OAuth 2.0 
 If you're the app developer, register the redirect URI in the Google Cloud Console.
 Request details: redirect_uri=http://localhost:3000/api/auth/callback/google flowName=GeneralOAuthFlow
 Related developer documentation
+
+
+
+my laptop's wifi shows ok but it disconnected and when i disconnected it manually then reconnect then  after few seconds it again shows ok but it disconnected

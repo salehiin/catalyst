@@ -8,13 +8,14 @@ const Page = () => {
     const session = useSession();
     const [bookings, setBookings] = useState([]);
     const loadData = async () => {
-        const resp = await fetch(`NEXT_PUBLIC_BASE_URL/my-bookings/api/${session?.data.user?.email}`);
+        const resp = await fetch(`process.env.NEXT_PUBLIC_BASE_URL/my-bookings/api/${session?.data.user?.email}`);
+        // await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/services/api/get-all`);
         const data = await resp.json();
         setBookings(data?.myBookings)
     };
 
     const handleDelete = async (id) =>{
-        const deleted = await fetch(`NEXT_PUBLIC_BASE_URL/my-bookings/api/booking/${id}`, {
+        const deleted = await fetch(`process.env.NEXT_PUBLIC_BASE_URL/my-bookings/api/booking/${id}`, {
             method : "DELETE",
         });
         const resp = await deleted.json();

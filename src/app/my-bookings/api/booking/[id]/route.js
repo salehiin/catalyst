@@ -42,7 +42,7 @@ export const GET = async (request, { params }) => {
     const bookingsCollection = db.collection('bookings')
     try {
         const resp = await bookingsCollection
-            .findOne({ _id: new ObjectId(params.id) })
+            .findOne({ _id: new ObjectId(params.id), })
         return NextResponse.json({ message: "Booking Successful", data: resp });
     } catch (error) {
         return NextResponse.json({ message: "Something went wrong" });

@@ -12,9 +12,9 @@ export const GET = async (request, { params }) => {
         //     return Response.json({ message: "Service not found" }, { status: 404 });
         // }
         // return Response.json({ service }, { status: 200 });
-        return NextResponse.json({ myBookings });
+        return NextResponse.json({ myBookings })
     } catch (error) {
-        console.error(error);
-        // return Response.json({ message: "Something went wrong", error }, { status: 500 });
+        // console.error(error);
+        return NextResponse.json({ message: "No Data Found"})
     }
 };
